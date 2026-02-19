@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Všetky predmety</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+
+body{background:#0b1117;color:#fff}
+
+.app{max-width:420px;margin:auto;min-height:100vh;background:#0b1117}
+
+/* HEADER */
+
+.header{background:#162432;padding:18px 16px 22px}
+
+.header-top{display:flex;align-items:center;font-size:18px;margin-bottom:18px}
+.back{font-size:22px;margin-right:8px}
+
+.header small{color:#8ea0b4;display:block;margin-bottom:6px;font-size:14px}
+.header h1{font-size:34px;font-weight:700;margin-bottom:4px}
+.term{color:#8ea0b4;font-size:15px}
+
+/* TABS */
+
+.tabs{
+  display:flex;
+  gap:26px;
+  padding:0 16px;
+  border-bottom:1px solid #1c2733;
+}
+
+.tab{
+  padding:14px 0 12px;
+  color:#8ea0b4;
+  font-size:15px;
+}
+
+.tab.active{
+  color:#74ff82;
+  border-bottom:2px solid #74ff82;
+}
+
+/* LIST */
+
+.list{padding:4px 16px 120px}
+
+.subject{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+  border-bottom:1px solid #18222c;
+}
+
+.left{display:flex;align-items:center;gap:14px}
+
+/* ICONS */
+
+.icon{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:20px;
+}
+
+.green{background:#2ecc71}
+.gray{background:#3a4652}
+
+/* TEXT */
+
+.name{font-weight:600;font-size:16px}
+.teacher{color:#8ea0b4;font-size:13px;margin-top:2px}
+.marks{color:#74ff82;font-size:13px;margin-top:4px}
+.grade{font-size:20px;font-weight:600}
+
+/* Disabled rows */
+
+.disabled .name,
+.disabled .teacher,
+.disabled .marks,
+.disabled .grade{color:#5c6a78}
+
+/* FAB */
+
+.fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#49b35f;
+  padding:14px 20px;
+  border-radius:12px;
+  font-weight:600;
+  box-shadow:0 6px 20px rgba(0,0,0,.45);
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <div class="header-top">
+      <span class="back">←</span>
+      Richard Štefkovič
+    </div>
+
+    <small>Známky</small>
+    <h1>Všetky predmety</h1>
+    <div class="term">2. polrok · 2025/2026 ▼</div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Po predmetoch</div>
+    <div class="tab">Podľa dátumu</div>
+    <div class="tab">Poznámky / rozvrh</div>
+  </div>
+
+  <div class="list">
+
+    <!-- ACTIVE SUBJECTS -->
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">A</div>
+        <div>
+          <div class="name">Anglický jazyk</div>
+          <div class="teacher">Marianna Sušková</div>
+          <div class="marks">1, 2</div>
+        </div>
+      </div>
+      <div class="grade">1.50</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">K</div>
+        <div>
+          <div class="name">Konverzácia v anglickom jazyku</div>
+          <div class="teacher">Alexandra Cihoňová</div>
+          <div class="marks">2</div>
+        </div>
+      </div>
+      <div class="grade">2.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">D</div>
+        <div>
+          <div class="name">Dejepis</div>
+          <div class="teacher">Daniel Damer</div>
+          <div class="marks">5</div>
+        </div>
+      </div>
+      <div class="grade">5.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">M</div>
+        <div>
+          <div class="name">Matematika</div>
+          <div class="teacher">Miroslava Damerová</div>
+          <div class="marks">5</div>
+        </div>
+      </div>
+      <div class="grade">5.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">A</div>
+        <div>
+          <div class="name">Aplikovaná informatika</div>
+          <div class="teacher">Beáta Urbanová</div>
+          <div class="marks">1</div>
+        </div>
+      </div>
+      <div class="grade">1.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">S</div>
+        <div>
+          <div class="name">Strojárska konštrukcia</div>
+          <div class="teacher">Ľudmila Rakytová Korenková</div>
+          <div class="marks">4</div>
+        </div>
+      </div>
+      <div class="grade">4.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon green">S</div>
+        <div>
+          <div class="name">Strojárska technológia</div>
+          <div class="teacher">Slavomír Petrus</div>
+          <div class="marks">3</div>
+        </div>
+      </div>
+      <div class="grade">3.00</div>
+    </div>
+
+    <div class="subject">
+      <div class="left">
+        <div class="icon gray">T</div>
+        <div>
+          <div class="name">Technické kreslenie</div>
+          <div class="teacher">Ľudmila Rakytová Korenková</div>
+          <div class="marks">m</div>
+        </div>
+      </div>
+      <div class="grade">5.00</div>
+    </div>
+
+    <!-- DISABLED / NO GRADES -->
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">S</div>
+        <div>
+          <div class="name">Správanie</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">S</div>
+        <div>
+          <div class="name">Slovenský jazyk a literatúra</div>
+          <div class="teacher">Daniel Damer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">F</div>
+        <div>
+          <div class="name">Fyzika</div>
+          <div class="teacher">Stanislav Bilo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">O</div>
+        <div>
+          <div class="name">Občianska náuka</div>
+          <div class="teacher">Ondrej Staník</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">N</div>
+        <div>
+          <div class="name">Náboženská výchova</div>
+          <div class="teacher">Ján Krett</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon green">T</div>
+        <div>
+          <div class="name">Telesná a športová výchova</div>
+          <div class="teacher">Stanislav Bilo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">P</div>
+        <div>
+          <div class="name">Prax</div>
+          <div class="teacher">Slavomír Petrus</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject disabled">
+      <div class="left">
+        <div class="icon gray">M</div>
+        <div>
+          <div class="name">Mechanika</div>
+          <div class="teacher">Ľudmila Rakytová Korenková</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="fab">Podpísať známky</div>
+
+</body>
+</html>
